@@ -1,162 +1,202 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Elite Gold Traders</title>
 
 <style>
+
 *{box-sizing:border-box;margin:0;padding:0}
 
 body{
-  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial;
-  background:#f0f4f3;
-  color:#0b1220;
-  padding:20px;
-  display:flex;
-  justify-content:center;
+font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+background:#f3f6f8;
+display:flex;
+justify-content:center;
+padding:15px;
 }
 
 .wrap{
-  width:100%;
-  max-width:1080px;
-  background:#fff;
-  border-radius:12px;
-  box-shadow:0 10px 35px rgba(0,0,0,0.08);
-  text-align:center;
-  padding:25px;
+width:100%;
+max-width:650px;
+background:#fff;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+padding:22px;
+text-align:center;
 }
 
 .top-banner{
-  background:linear-gradient(90deg,#ff4d4d,#d62828);
-  color:#fff;
-  padding:10px;
-  border-radius:8px;
-  font-weight:800;
-  margin-bottom:18px;
+background:linear-gradient(90deg,#ff4d4d,#d62828);
+color:#fff;
+font-weight:800;
+padding:10px;
+border-radius:8px;
+margin-bottom:18px;
+font-size:14px;
 }
 
 .logo{
-  width:95px;
-  height:95px;
-  border-radius:18px;
-  background:#e9f6ff;
-  margin:0 auto 16px;
-  overflow:hidden;
+width:85px;
+height:85px;
+border-radius:18px;
+overflow:hidden;
+margin:0 auto 15px;
 }
 
 .logo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
-.heading h1{
-  font-size:22px;
-  font-weight:800;
-  line-height:1.3;
+h1{
+font-size:20px;
+line-height:1.4;
+font-weight:800;
+margin-bottom:10px;
 }
 
 .accent{
-  color:#0aa3ff;
+color:#0aa3ff;
 }
 
 .sub-title{
-  color:#0b6b2e;
-  font-weight:700;
-  margin:12px 0 8px;
+color:#0b6b2e;
+font-weight:700;
+margin-bottom:6px;
+font-size:14px;
 }
 
 .stats{
-  margin-bottom:8px;
-  color:#444;
-  font-weight:700;
+font-weight:700;
+color:#444;
+margin-bottom:6px;
+font-size:13px;
 }
 
 .fomo{
-  color:#d62828;
-  font-weight:800;
-  margin-bottom:12px;
+color:#d62828;
+font-weight:800;
+margin-bottom:10px;
+font-size:13px;
 }
 
 .desc{
-  padding:12px;
-  font-size:13px;
-  margin-bottom:18px;
-  color:#333;
-  line-height:1.6;
-}
-
-.desc small{
-  color:#777;
+font-size:13px;
+line-height:1.6;
+margin-bottom:16px;
+color:#333;
 }
 
 .join-proof{
-  color:#ff3b3b;
-  font-weight:800;
-  margin-bottom:10px;
+color:#ff3b3b;
+font-weight:800;
+margin-bottom:12px;
+font-size:13px;
 }
 
-.btn-telegram{
-  background:linear-gradient(180deg,#0b7b2b,#045d1f);
-  color:#fff;
-  padding:18px 42px;
-  border-radius:50px;
-  font-weight:900;
-  font-size:13px;
-  text-decoration:none;
-  display:inline-block;
-  animation:pulseBtn 2s infinite ease-in-out;
-  box-shadow:0 0 25px rgba(11,123,43,0.4);
+.btn{
+display:inline-block;
+background:linear-gradient(180deg,#0b7b2b,#045d1f);
+color:#fff;
+padding:16px 34px;
+border-radius:50px;
+font-weight:900;
+font-size:14px;
+text-decoration:none;
+box-shadow:0 0 20px rgba(0,0,0,0.2);
+animation:pulse 2s infinite;
 }
 
-@keyframes pulseBtn{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.06)}
-  100%{transform:scale(1)}
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.06)}
+100%{transform:scale(1)}
 }
 
-.timer-row{
-  display:flex;
-  gap:10px;
-  justify-content:center;
-  margin:20px 0;
+.timer{
+display:flex;
+justify-content:center;
+gap:10px;
+margin:20px 0;
 }
 
-.timer-pill{
-  background:#e6f5ff;
-  padding:10px 16px;
-  border-radius:25px;
-  font-weight:800;
+.timer div{
+background:#e6f5ff;
+padding:10px 15px;
+border-radius:25px;
+font-weight:800;
+font-size:14px;
 }
 
 .note{
-  font-size:14px;
-  font-weight:600;
+font-size:13px;
+font-weight:600;
 }
 
-.footer-links{
-  margin-top:22px;
-  font-size:10px;
+.footer{
+margin-top:20px;
+font-size:10px;
 }
 
-.footer-links a{
-  color:#0a84ff;
-  text-decoration:none;
-  font-weight:600;
+.footer a{
+text-decoration:none;
+color:#0a84ff;
 }
 
 .fb-disclaimer{
-  font-size:8px;
-  color:#777;
-  margin-top:20px;
-  line-height:1.6;
+font-size:8px;
+margin-top:18px;
+color:#777;
+}
+
+/* JOIN POPUP */
+
+.popup{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#fff;
+padding:10px 14px;
+border-radius:8px;
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
+font-size:12px;
+display:none;
+animation:slide 0.4s;
+}
+
+@keyframes slide{
+from{transform:translateY(20px);opacity:0}
+to{transform:translateY(0);opacity:1}
+}
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+.wrap{padding:18px}
+
+h1{font-size:18px}
+
+.btn{
+font-size:13px;
+padding:15px 28px;
+}
+
 }
 
 </style>
 
-<!-- Meta Pixel Code -->
+
+<!-- FACEBOOK PIXEL -->
+
 <script>
+
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -166,39 +206,33 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '1428595102003135'); 
-fbq('track', 'PageView');
+fbq('init','1428595102003135');
+fbq('track','PageView');
+
 </script>
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1428595102003135&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
-
 </head>
+
 
 <body>
 
 <div class="wrap">
 
 <div class="top-banner">
-🔥 Limited Free Access — Closing Very Soon
+🔥 Limited Free Access — Closing Soon
 </div>
 
 <div class="logo">
-<img src="egt.png" alt="logo">
+<img src="egt.png">
 </div>
 
-<div class="heading">
 <h1>
 How Smart Traders Are Turning<br>
 <span class="accent">Market Moves Into Daily Profits</span>
 </h1>
-</div>
 
 <div class="sub-title">
-Elite Gold Traders — Private Crypto & Forex Signal Community
+Elite Gold Traders – Private Crypto & Forex Community
 </div>
 
 <div class="stats">
@@ -206,122 +240,147 @@ Elite Gold Traders — Private Crypto & Forex Signal Community
 </div>
 
 <div class="fomo">
-⚠️ Free Entry Slots Are Filling Rapidly
+⚠️ Free Entry Slots Filling Rapidly
 </div>
 
 <div class="desc">
 
-Inside this private community you’ll get:
-
-<br><br>
-
 ✔ High-Probability Crypto & Forex Signals<br>
-✔ Exact Entry, Stop Loss & Target Levels<br>
-✔ Smart Risk Management Guidance<br>
-✔ Real-Time Market Insights From Pro Traders
+✔ Exact Entry, Stop Loss & Targets<br>
+✔ Smart Risk Management<br>
+✔ Real-Time Market Insights
 
 <br><br>
 
-Many traders are joining daily to learn how experienced traders analyze the market.
-
-<br><br>
-
-<small>Trading involves risk. Signals shared for educational purposes only.</small>
+Many traders are joining daily to learn how professionals trade.
 
 </div>
 
 <div class="join-proof">
-🔥 27 Traders Joined In The Last Hour
+🔥 31 Traders Joined In The Last Hour
 </div>
 
-<div style="margin-top:15px;">
-
-<div style="color:#d62828;font-weight:800;font-size:14px;margin-bottom:10px;">
-⚠️ Free access will close automatically when timer ends
-</div>
-
-<a class="btn-telegram"
-href="https://t.me/+g5V2BFmE2NQ3Yjll"
-target="_blank"
-onclick="trackSubscribe()">
-
+<a class="btn" href="https://t.me/+g5V2BFmE2NQ3Yjll" target="_blank" onclick="track()">
 UNLOCK FREE SIGNAL ACCESS
-
 </a>
 
-<div style="font-size:13px;color:#555;margin-top:8px;">
-Once the timer expires, entry may be restricted.
-</div>
+<div class="timer">
 
-</div>
+<div id="minutes">10 Min</div>
+<div id="seconds">00 Sec</div>
 
-<div class="timer-row">
-<div class="timer-pill" id="minutes">10 Min</div>
-<div class="timer-pill" id="seconds">00 Sec</div>
 </div>
 
 <div class="note">
-Only serious traders are accepted during each access window.
-Secure your spot before the timer expires.
+Join before the timer expires to secure your access.
 </div>
 
-<div class="footer-links">
+<div class="footer">
 
-<a href="https://ElitePips.online/privacy" target="_blank">Privacy Policy</a> •
-
-<a href="https://ElitePips.online/disclaimer" target="_blank">Disclaimer</a> •
-
-<a href="https://ElitePips.online/terms" target="_blank">Terms & Conditions</a>
+<a href="#">Privacy</a> •
+<a href="#">Disclaimer</a> •
+<a href="#">Terms</a>
 
 </div>
 
 <div class="fb-disclaimer">
 
-This site is not a part of the Facebook™ website or Facebook Inc.  
-Additionally, this site is NOT endorsed by Facebook™ in any way.  
-Facebook™ is a trademark of Facebook Inc.
+This site is not part of Facebook™ or Meta™.
 
 </div>
 
 </div>
+
+
+<!-- JOIN POPUP -->
+
+<div class="popup" id="popup">
+Rahul from Mumbai joined 20 seconds ago
+</div>
+
 
 <script>
 
 /* TIMER */
 
-let remaining = 10 * 60;
+let duration = 600;
 
-const m = document.getElementById("minutes");
-const s = document.getElementById("seconds");
+function startTimer(){
 
-function updateTimer(){
+let timer = duration;
 
-if(remaining <= 0) return;
+setInterval(function(){
 
-const min = Math.floor(remaining / 60);
-const sec = remaining % 60;
+let minutes = parseInt(timer / 60);
+let seconds = parseInt(timer % 60);
 
-m.textContent = (min < 10 ? "0"+min : min) + " Min";
-s.textContent = (sec < 10 ? "0"+sec : sec) + " Sec";
+minutes = minutes < 10 ? "0"+minutes : minutes;
+seconds = seconds < 10 ? "0"+seconds : seconds;
 
-remaining--;
+document.getElementById("minutes").innerHTML = minutes + " Min";
+document.getElementById("seconds").innerHTML = seconds + " Sec";
+
+timer--;
+
+if(timer < 0){
+timer = duration;
+}
+
+},1000);
 
 }
 
-updateTimer();
+startTimer();
 
-setInterval(updateTimer,1000);
 
 /* FB EVENT */
 
-function trackSubscribe(){
+function track(){
 
 fbq('track','Subscribe',{
-content_name:'Telegram Join Button',
-content_category:'Trading Signals'
+content_name:'Telegram Join'
 });
 
 }
+
+
+/* AUTO REDIRECT */
+
+setTimeout(function(){
+
+window.location.href="https://t.me/+g5V2BFmE2NQ3Yjll";
+
+},5000);
+
+
+/* FAKE LIVE POPUPS */
+
+const names = [
+"Rahul from Mumbai",
+"Aman from Delhi",
+"Rohit from Pune",
+"Arjun from Bangalore",
+"Vikas from Hyderabad",
+"Karan from Kolkata"
+];
+
+function showPopup(){
+
+const popup = document.getElementById("popup");
+
+const name = names[Math.floor(Math.random()*names.length)];
+
+popup.innerHTML = name + " joined 15 seconds ago";
+
+popup.style.display="block";
+
+setTimeout(()=>{
+popup.style.display="none";
+},4000);
+
+}
+
+setInterval(showPopup,7000);
 
 </script>
 
